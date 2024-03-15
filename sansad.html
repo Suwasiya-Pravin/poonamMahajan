@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>Poonam Mahajan</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon.webp" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="css/versions.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/header.css" />
+
+    <style>
+      body{
+        overflow-x: hidden;
+        margin: 0;
+      }
+      .chart-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    .chart {
+        width: 50%;
+        padding: 10px;
+    }
+    .chart  h1{
+      font-size: 20px;
+    }
+    #salesChart{
+      width: 300px;
+      height: 300px;
+    }
+    @media (max-width: 768px) {
+        .chart {
+            width: 100%;
+        }
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="index.html"><img
+          src="./images/logos/Poonam Mahajan (1).png"
+          alt="Company Logo"
+          id="logo" /></a>
+      </div>
+      <div class="navbar" id="menuToggle">
+        <ul class="nav">
+            <li class="navLink"><a class="link" href="index.html">Home</a></li>
+            <li class="navLink">
+              <a class="link" href="career-acadamy.html">About me</a>
+            </li>
+            <li class="navLink">
+              <a class="link" href="covide-relife.html">Covid relief </a>
+            </li>
+            <li class="navLink">
+              <a class="link" href="self-group.html">Self Help Group</a>
+            </li>
+            <li class="navLink">
+              <a class="link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="navLink">
+              <a class="link" href="sansad.html">Sansad</a>
+            </li>
+          </ul>
+      </div>
+      <i class="fa-solid fa-bars" id="menu-toggle"></i>
+    </div>
+    <section class="min-h-screen" style="margin-top: -70px">
+      <div class="lg:py-12 py-4">
+        <!-- <div class="covid-cards-container">
+        <h1>
+          covid Relief
+        </h1>
+        <div class="covid-cards">
+          <div class="covid-card">
+            <div>
+              <h1>heading</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Perspiciatis nihil quam eligendi fuga doloremque veritatis?
+              </p>
+            </div>
+
+            <img src="images/Poonam_Pramod_Mahajan.jpg" alt="leader" class=" h-[280px] w-full rounded-lg  ">
+
+          </div>
+          <div class="covid-card">
+            <div>
+              <h1>heading</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Perspiciatis nihil quam eligendi fuga doloremque veritatis?
+              </p>
+            </div>
+
+            <img src="images/Poonam_Pramod_Mahajan.jpg" alt="leader" class=" h-[280px] w-full rounded-lg  ">
+
+          </div>
+          <div class="covid-card">
+            <div>
+              <h1>heading</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Perspiciatis nihil quam eligendi fuga doloremque veritatis?
+              </p>
+            </div>
+
+            <img src="images/Poonam_Pramod_Mahajan.jpg" alt="leader" class=" h-[280px] w-full rounded-lg  ">
+
+          </div>
+          
+        </div>
+        
+      </div> -->
+        <div class="container mx-auto py-4 px-3 ">
+          <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-center sansadh1 ">Members of Parliament Local Area Development Scheme (MPLADS)</h1>
+
+          <div style="background-color: white;" class="counter-container section lb text-white">
+            <div  style="background-color: white;" class="counterss section lb">
+             
+              <div class="counter">
+                  <div class="count" id="sansad">38</div>
+                  <h2>Total Works </h2>
+              </div>
+              <div class="counter">
+                <div class="count" id="sansadii">13</div>
+                <h2>Total works completed</h2>
+              </div>
+                <div class="counter">
+                    <div class="count" id="sansadiii">2.50 Cr</div>
+                    <h2>Total Funds Released</h2>
+                </div>
+                <div class="counter">
+                    <div class="count" id="sansadiiii">1.84 Cr</div>
+                    <h2>Total Expenditure</h2>
+                </div>
+            </div>
+        </div>
+          </div>
+
+          <div class="chart-container">
+            <div class="chart">
+                <h1>Financial Performance</h1>
+                <canvas height="200px" id="financialPerformanceChart"></canvas>
+            </div>
+            <div class="chart">
+              <h1>Expenditure Over Entitlement</h1>
+                <canvas id="salesChart"></canvas>
+            </div>
+        </div>
+          <br>
+          <br>
+          <br>
+          <div class="textbox">
+            <div class="snip snip-orange" >
+             <img src="images/logos/Bjp-removebg-preview.png" class="teximg" alt="">  <p class="texto"> 304  Questions ask in parliments </p>
+            </div>
+            <div class="snip snip-orange" >
+              <img src="images/logos/Bjp-removebg-preview.png" class="teximg" alt=""> <p class="texto"> 7 Most Important Debats are done by Poonam Mahajan </p>
+            </div>
+            <!-- <div class="snip snip-orange" >
+              <img src="images/logos/Bjp-removebg-preview.png" class="teximg" alt=""><p class="texto">10,000 COVID patients admitted at various hospitals. </p>
+            </div> -->
+          </div>
+          <br>
+        
+        </div>
+      </div>
+      <div class="width-full text-center">
+        <p class="text-white" ><a class="bg-orange-400 p-8 rounded-full hover:text-white hover:bg-orange-500 text-3xl" href="https://sansad.in/ls/members/biography/4660?from=members">Know More <i class="fa-solid fa-arrow-right"></i></a></p>
+      </div>
+    </section>
+    <div class="footer">
+      <div class="container">
+          <div class="container  row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="single_footer single_footer_address">
+                      <h4>Page Link</h4>
+                      <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="career-acadamy.html">About Me</a></li>
+                          <li><a href="covide-relife.html">Covid Relief</a></li>
+                          <li><a href="self-group.html">Self Help Group</a></li>
+                          <li><a href="contact.html">Contact Us</a></li>
+                          <li><a href="sansad.html">Sansad</a></li>
+                          <!-- <li><a href="events.html">Event</a></li> -->
+                      </ul>
+                  </div>
+              </div><!--- END COL -->
+              <!-- action="mailto:pravinsuwasiya45@gmail.com" -->
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <!-- <div class="single_footer single_footer_address">
+                      <h4>Subscribe today</h4>
+                      <div class="signup_form">
+                          <form action="mailto:pravinsuwasiya45@gmail.com" class="subscribe">
+                              <input type="text" style="text-align: justify;" class="subscribe__input" placeholder="Enter Email Address">
+                              <button type="submit" style="right: 30px;" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                          </form>
+                      </div>
+                  </div> -->
+                  <div class="social_profile">
+                      <ul>
+                          <li><a href="https://www.facebook.com/PoonamMahajanOfficial/"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="https://twitter.com/poonam_mahajan"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="https://www.linkedin.com/in/poonammahajanofficial/?originalSubdomain=in"><i class="fab fa-linkedin"></i></a></li>
+                          <li><a href="https://www.instagram.com/poonam.mahajan/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="https://www.youtube.com/channel/UC-4lZ2r06vMoFBBUF-3IotA"><i class="fab fa-youtube"></i></a></li>
+                      </ul>
+                  </div>
+              </div><!--- END COL -->
+          </div><!--- END ROW -->
+          <div class="row">
+              <div class="col-lg-12 col-sm-12 col-xs-12">
+                  <p class="copyright">Copyright © 2024 All rights reserved.</p>
+              </div><!--- END COL -->
+          </div><!--- END ROW -->
+      </div><!--- END CONTAINER -->
+  </div>
+  <div class="icon-barr">
+    <a href="https://www.facebook.com/PoonamMahajanOfficial/" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/poonam_mahajan" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/poonam.mahajan/?hl=en" class="youtube" ><i class="fa fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/poonammahajanofficial/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.youtube.com/channel/UC-4lZ2r06vMoFBBUF-3IotA" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+<script src="js/all.js"></script>
+
+    <script src="js/jquery.mobile.customized.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/camera.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const financialCtx = document.getElementById('financialPerformanceChart').getContext('2d');
+      const financialPerformanceChart = new Chart(financialCtx, {
+          type: 'bar',
+          data: {
+              labels: ['Recommended', 'Sanctioned', 'Expenditure'],
+              datasets: [{
+                  label: 'Expenditure (Cr)',
+                  data: [5.1, 5.1, 1.84],
+                  backgroundColor: 'orange',
+                  borderWidth: 1
+              }]
+          },
+      });
+
+      const salesCtx = document.getElementById('salesChart').getContext('2d');
+      const salesChart = new Chart(salesCtx, {
+        type: 'pie', // Changed to pie chart
+        data: {
+            labels: ['Expenditure','Yet to spend'],
+            datasets: [{
+                data: [36.08,63.9],
+                backgroundColor: ['orange', 'red'], // Customize colors
+            }]
+        },
+    });
+  </script>
+    <script src="js/custom.js"></script>
+    <script src="js/custom_carousel.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/jquery.vide.js"></script>
+    <div id="fb-root"></div>
+  </body>
+</html>
