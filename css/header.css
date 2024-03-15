@@ -1,0 +1,143 @@
+.header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 50px !important;
+    z-index: 10 !important;
+    transition: 0.2s all ease-out;
+}
+
+.logo img {
+    width: 80%;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0 !important;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav .navlink {
+    font-family: var(--header-font);
+    font-size: 0.9em;
+    font-weight: 600 !important;
+    color: #000 !important;
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: 0.2s all ease-in-out;
+}
+
+.nav .navlink:hover {
+    color: #fff !important;
+    background: #fc8523 !important;
+}
+
+.nav .navlink a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav .navlink:hover a {
+    color: #fff;
+    font-size: 1em !important;
+}
+
+.navlinkActive {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #fc8523;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    list-style: none;
+}
+
+.navlinkActive a {
+    text-decoration: none;
+    color: var(--primary-dark);
+}
+
+.header.sticky {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+}
+
+#menu-toggle {
+    display: none;
+    color: #000;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+@media screen and (max-width:980px) {
+
+    .header,
+    .header.sticky {
+        padding: 15px 0px;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .logo img {
+        width: 60%;
+    }
+
+    .navbar {
+        position: absolute;
+        top: -500px;
+        right: -7px;
+        width: 100%;
+        max-width: 500px;
+        background: #fff;
+        display: block;
+        margin: 8px;
+        padding: 12px;
+        opacity: 0;
+        transition: 0.8s all ease-in-out;
+        z-index: -5;
+    }
+
+    .navbar .nav {
+        display: block;
+    }
+
+    .navbar .nav .navlink {
+        margin-bottom: 12px;
+    }
+
+    .navlinkActive {
+        margin-bottom: 12px;
+    }
+
+    .menu-active {
+        position: absolute;
+        top: 60%;
+        display: block;
+        opacity: 1;
+        transition: 0.2s all ease-in-out opacity 0.1s ease-in-out;
+    }
+}
+
+@media screen and (max-width:520px) {
+
+    .header,
+    .header.sticky {
+        padding: 15px 15px !important;
+    }
+}

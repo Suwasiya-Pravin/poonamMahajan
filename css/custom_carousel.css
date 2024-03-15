@@ -1,0 +1,123 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 1;
+    width: 40%;
+}
+
+.carousel-content h2 {
+    font-size: 4em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.carousel-content p {
+    font-size: 2em;
+    color: #fff;
+    font-style: italic;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 40%, #000);
+}
+
+.carousel-btn {
+    position: absolute;
+    bottom: 3%;
+    transform: translateY(-50%);
+    background: #fc8523;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    z-index: 2;
+}
+
+.carousel-btn:hover {
+    background: #fff;
+    color: #fc8523;
+}
+
+.carousel-btn-prev {
+    left: 41%;
+}
+
+.carousel-btn-next {
+    right: 41%;
+}
+
+/* Responsive CSS */
+@media (max-width: 920px) {
+    .carousel-content {
+        width: 70%;
+        left: 15px;
+    }
+
+    .carousel-content h2 {
+        font-size: 1.8em;
+    }
+
+    .carousel-content p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-content {
+        width: 80%;
+        left: 10px;
+    }
+
+    .carousel-content h2 {
+        font-size: 1.4em;
+    }
+
+    .carousel-content p {
+        font-size: 0.8em;
+    }
+
+    .carousel-btn {
+        bottom: 0;
+        border-radius: 4px;
+        padding: 4px 12px;
+        font-size: 14px;
+    }
+
+    .carousel-btn-prev {
+        left: 66%;
+    }
+
+    .carousel-btn-next {
+        right: 5%;
+    }
+}
