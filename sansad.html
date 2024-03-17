@@ -46,7 +46,7 @@
         flex-wrap: wrap;
       }
       .chart {
-        width: 50%;
+        width: 40%;
         padding: 10px;
       }
       .chart h1 {
@@ -154,7 +154,7 @@
             <div style="background-color: white" class="counterss section lb">
               <div class="counter">
                 <div class="count" id="sansad">0</div>
-                <h2>Total Works</h2>
+                <h2 class="text-xl">Total Works Recommended</h2>
               </div>
               <div class="counter">
                 <div class="count" id="sansadii">0</div>
@@ -180,6 +180,10 @@
           <div class="chart">
             <h1>Expenditure Over Entitlement</h1>
             <canvas id="salesChart"></canvas>
+          </div>
+          <div class="chart">
+            <h1>Work Recommended by Sector</h1>
+            <canvas id="sectorChart"></canvas>
           </div>
         </div>
         <br />
@@ -324,10 +328,10 @@
       const sansadii = document.getElementById("sansadii");
       const sansadiii = document.getElementById("sansadiii");
       const sansadiiii = document.getElementById("sansadiiii");
-      const targetsansad = 38;
-      const targetsansadii = 13;
-      const targetsansadiii = 2.5;
-      const targetsansadiiii = 1.8;
+      const targetsansad = 446;
+      const targetsansadii = 416;
+      const targetsansadiii = 25;
+      const targetsansadiiii = 26.14;
       let currentsansad = 0;
       let currentsansadii = 0;
       let currentsansadiii = 0;
@@ -353,11 +357,11 @@ function updateCounters() {
   const interval = setInterval(() => {
     if (currentsansad < targetsansad) {
       currentsansad += stepsansad;
-      sansad.textContent = currentsansad;
+      sansad.textContent = currentsansad-2;
     }
     if (currentsansadii < targetsansadii) {
       currentsansadii += stepsansadii;
-      sansadii.textContent = currentsansadii;
+      sansadii.textContent = currentsansadii-4;
     }
 
     if (currentsansadiii < targetsansadiii) {
@@ -662,14 +666,27 @@ function updateCounters() {
       });
 
       const salesCtx = document.getElementById("salesChart").getContext("2d");
+      const sectorCtx = document.getElementById("sectorChart").getContext("2d");
       const salesChart = new Chart(salesCtx, {
         type: "pie", // Changed to pie chart
         data: {
           labels: ["Expenditure", "Yet to spend"],
           datasets: [
             {
-              data: [36.08, 63.9],
+              data: [100, 0],
               backgroundColor: ["orange", "red"], // Customize colors
+            },
+          ],
+        },
+      });
+      const sectorChart = new Chart(sectorCtx, {
+        type: "pie", // Changed to pie chart
+        data: {
+          labels: ["Health", "Infrastructure and Alied","Education", "Sports"],
+          datasets: [
+            {
+              data: [49.49,45.45,4.04,1.01],
+              backgroundColor: ["#fc8523", "yellow","green", "red"], // Customize colors
             },
           ],
         },
